@@ -102,6 +102,33 @@ console.log(result1);
 console.log(result2);
 console.log(result3);
 
+//Data Types
+
+//Primitive Data types
+
+
+let favorite ="meat"
+let myNum = 20;
+let score = true;
+let quantity;
+let myFriend = null;
+
+console.log( typeof favorite);//
+console.log( typeof myNum);
+console.log(typeof score);
+console.log(typeof quantity);
+console.log(typeof myFriend);
+
+//Array
+
+let names =['Peter','John', 'Claude','Ben']
+
+console.log(names);
+//Array has length and it is 0 index based
+
+let sibling = names[1]; //Array can be accessed by square brackets
+console.log(sibling)
+
 
 
 
