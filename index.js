@@ -130,9 +130,32 @@ let sibling = names[1]; //Array can be accessed by square brackets
 console.log(sibling)
 
 
+//FUNCTION
 
+function myName(){
+    console.log("My name is JEAN ")
+}
 
+myName();
 
+function Calculation(num1, num2){
+   return num1 + num2;
+}
+
+const value1 =Calculation(10, 25);
+const value2 = Calculation(13, 17);
+const newValue =[value1, value2];
+console.log(newValue);
+
+//CODEWAR KATA ON 16 SEPT 2024
+
+function reverseWord(){
+    let phrase = "I have been to Kenya since last year";
+    let reverse = phrase.split(" ").reverse().join(" ");
+    console.log(reverse);
+}
+
+reverseWord();
 
 
 
