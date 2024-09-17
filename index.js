@@ -147,15 +147,40 @@ const value2 = Calculation(13, 17);
 const newValue =[value1, value2];
 console.log(newValue);
 
-//CODEWAR KATA ON 16 SEPT 2024
+const meat =[20, 30, 50, 70]
+const vegetables =[25, 40, 60]
+    let total = 0;
+    for(let i = 0; i < meat.length; i++){
+        total+= meat[i]
 
+       // console.log(total);    
+    }
+    
+
+
+console.log(total)
+console.log(vegetables)
+
+
+//CODEWAR KATA ON 16 SEPT 2024 
+
+let phrase = "I have been to Kenya since last year";
 function reverseWord(){
-    let phrase = "I have been to Kenya since last year";
-    let reverse = phrase.split(" ").reverse().join(" ");
+    let reverse = phrase.split(" ").reverse().join(" ")
     console.log(reverse);
+    
+    return reverse   
 }
 
 reverseWord();
 
+//To reverse a phrase without changing the position of each word
+function reversePhrase(){
+    let word = phrase.split(" ");
+    let reverse = word.map((el) => el.split("").reverse().join(""))
+    let newWord = reverse.join(" ").toString();
+     console.log(newWord);
+     return newWord;
+}
 
-
+reversePhrase()
