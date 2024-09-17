@@ -178,9 +178,22 @@ reverseWord();
 function reversePhrase(){
     let word = phrase.split(" ");
     let reverse = word.map((el) => el.split("").reverse().join(""))
-    let newWord = reverse.join(" ").toString();
-     console.log(newWord);
-     return newWord;
+    let newWord = reverse.join(" ").toString()
+    console.log(newWord)
+  return newWord;
 }
-
 reversePhrase()
+
+let mySet = [1, 2, 4, 10]
+
+let tripleNum = mySet.map((element) => element * 3);
+console.log(tripleNum);
+
+let mySum = mySet.forEach((num) => {num + 5 })
+console.log(mySum);
+
+let addition = mySet.reduce((accumulator, currentValue) =>{ 
+    return accumulator + currentValue;
+},0)
+
+console.log(addition)
