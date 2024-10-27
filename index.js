@@ -196,4 +196,11 @@ let addition = mySet.reduce((accumulator, currentValue) =>{
     return accumulator + currentValue;
 },0)
 
-console.log(addition)
+console.log(addition);
+
+let arrayNum = [1,2,3,4,5,6,7];
+let oddNum = arrayNum.filter((num) =>
+    num % 2 === 0
+)
+
+console.log(oddNum);
