@@ -204,3 +204,4 @@ let oddNum = arrayNum.filter((num) =>
 )
 
 console.log(oddNum);
+//end 
