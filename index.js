@@ -204,4 +204,9 @@ let oddNum = arrayNum.filter((num) =>
 )
 
 console.log(oddNum);
-//end 
+let numberOne = [1,2,4,5,7,8];
+let doubleNum = numberOne.map((num) =>{
+    number*2
+})
+
+console.log(doubleNum);
