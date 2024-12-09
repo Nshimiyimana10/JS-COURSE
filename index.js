@@ -210,4 +210,5 @@ let doubleNum = numberOne.map((num) =>{
 })
 
 console.log(doubleNum);
-//doubling array numbers in js
+//doubling array 
+//The end 
