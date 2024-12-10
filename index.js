@@ -206,7 +206,7 @@ let oddNum = arrayNum.filter((num) =>
 console.log(oddNum);
 let numberOne = [1,2,4,5,7,8];
 let doubleNum = numberOne.map((num) =>{
-    number*2
+    number*3
 })
 
 console.log(doubleNum);
