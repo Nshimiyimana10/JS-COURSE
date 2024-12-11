@@ -206,9 +206,12 @@ let oddNum = arrayNum.filter((num) =>
 console.log(oddNum);
 let numberOne = [1,2,4,5,7,8];
 let doubleNum = numberOne.map((num) =>{
-    number*3
+    num*3
 })
 
 console.log(doubleNum);
 //doubling array 
 //The end 
+
+const list = new Array(1,2,3,4,5);
+console.log(list);
