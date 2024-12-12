@@ -205,9 +205,9 @@ let oddNum = arrayNum.filter((num) =>
 
 console.log(oddNum);
 let numberOne = [1,2,4,5,7,8];
-let doubleNum = numberOne.map((num) =>{
+let doubleNum = numberOne.map((num) =>
     num*3
-})
+)
 
 console.log(doubleNum);
 //doubling array 
@@ -215,3 +215,9 @@ console.log(doubleNum);
 
 const list = new Array(1,2,3,4,5);
 console.log(list);
+const array =[1,2,2,3,4];
+const triple = array.map((num) =>
+    num*3
+)
+
+console.log(triple);
