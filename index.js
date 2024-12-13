@@ -217,7 +217,8 @@ const list = new Array(1,2,3,4,5);
 console.log(list);
 const array =[1,2,2,3,4];
 const triple = array.map((num) =>
-    num*3+2
-)
+    num > 1
+);
+
 
 console.log(triple);
