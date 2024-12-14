@@ -222,3 +222,8 @@ const triple = array.map((num) =>
 
 
 console.log(triple);
+
+console.log(NaN == NaN);
+console.log(null == undefined);
+console.log(null ===undefined);
+// this is one of the primitive data types
