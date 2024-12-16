@@ -227,3 +227,7 @@ console.log(NaN == NaN);
 console.log(null == undefined);
 console.log(null ===undefined);
 // this is one of the primitive data types
+
+const listNum = [1, 3, 5, 4, 7];
+const squaredNum = listNum.map((number) => number**2);
+console.log(squaredNum);
