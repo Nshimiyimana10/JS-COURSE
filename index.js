@@ -231,3 +231,4 @@ console.log(null ===undefined);
 const listNum = [1, 3, 5, 4, 7];
 const squaredNum = listNum.map((number) => number**2);
 console.log(squaredNum);
+//Map method return a new array bcs it performs a function for each array element
