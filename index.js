@@ -233,3 +233,22 @@ const squaredNum = listNum.map((number) => number**2);
 console.log(squaredNum);
 //Map method return a new array bcs it performs a function for each array element
 //the end 
+
+//Display the current data
+
+let today = new Date();
+let day = today.getDay();
+
+let week = ['Sunday', 'Monday', 'Tuesday','Wednesday', 'Thursday','Friday','Saturday'];
+console.log(day);
+
+let thisDay = week[day];
+console.log(thisDay);
+
+const hour = today.getHours();
+const minutes = today.getMinutes();
+const seconds = today.getSeconds();
+console.log(hour);
+
+const time = `Today we are on ${thisDay} ${hour}:${minutes}:${seconds}`;
+console.log(time);
