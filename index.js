@@ -288,3 +288,57 @@ let s = (a+b+c)/2;
 //let Area = Math.sqrt(s((s-a)(s-b)(s-c)));
     let Area = Math.ceil(Math.sqrt(s*((s-a)*(s-b)*(s-c))));
     console.log(Area);
+
+//Leap year check
+
+function checkLeapYear(year){
+   if((year % 4 ==0 && year % 100 !==0) || (year % 400 ==0)){
+     return console.log(`${year} is a leap year`)
+   }
+   else{ console.log(`sorry! ${year} is not a leap year`)
+}
+}
+
+(checkLeapYear(400))
+
+//Checking if the user input is in random numbers between 1 and 10
+
+function checkRandomNumber(){
+    let randomNumber = Math.ceil(Math.random()*10);
+    console.log(randomNumber);
+    let guessNum = parseInt(prompt("Enter a random number between 0 and 10"));
+
+    if(randomNumber===guessNum){
+        return console.log("Your choice is correct");
+
+    }
+    else{
+        console.log("Sorry!You choose incorrect number")
+    }
+}
+
+checkRandomNumber()
+
+//program for multiplication and division
+
+let number1 = document.getElementById("num1").value;
+let number2 = document.getElementById("num2").value;
+let divideBtn = document.getElementById("divide");
+let multiplyBtn = document.getElementById("multiply");
+
+function getMultiplication(){
+   return number1*number2;
+}
+
+getMultiplication()
+
+function getDivision(){
+    return number1/number2;
+ }
+
+ getDivision()
+
+ let result = document.getElementById("result");
+ result.innerHTML= getDivision();
+ result = getMultiplication();
+ 
