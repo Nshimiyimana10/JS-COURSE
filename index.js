@@ -252,3 +252,39 @@ console.log(hour);
 
 const time = `Today we are on ${thisDay} ${hour}:${minutes}:${seconds}`;
 console.log(time);
+
+let date = today.getDate();
+console.log(date)
+
+//Display date in this format dd/mm/yyyy
+
+let month = today.getMonth()+1;
+let year = today.getFullYear();
+
+if(date < 10){
+  date = '0' + date;
+}
+
+else{ date;
+}
+
+if(month < 10){
+ month = '0' + month;
+}
+
+else{
+ month
+}
+
+const firstDateFormat = `Today is ${date}/${month}/${year}`;
+console.log(firstDateFormat);
+
+//To find the area of 3 sided triangle
+//Use of Heron's Formula 
+const a = 5;
+const b= 6;
+const c = 7;
+let s = (a+b+c)/2;
+//let Area = Math.sqrt(s((s-a)(s-b)(s-c)));
+    let Area = Math.ceil(Math.sqrt(s*((s-a)*(s-b)*(s-c))));
+    console.log(Area);
