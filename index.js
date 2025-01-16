@@ -325,20 +325,27 @@ let number1 = document.getElementById("num1").value;
 let number2 = document.getElementById("num2").value;
 let divideBtn = document.getElementById("divide");
 let multiplyBtn = document.getElementById("multiply");
+console.log(number1)
 
-function getMultiplication(){
-   return number1*number2;
+
+    function getMultiplication(){
+    let number1 = document.getElementById("num1").value;
+    let myResult1 = document.getElementById("result1");
+    let multiplication = number1*number2;
+    multiplication = parseInt(multiplication);
+    myResult1.innerHTML = "Multiplication is:" + " "+ multiplication
 }
 
-getMultiplication()
 
-function getDivision(){
-    return number1/number2;
+
+function getDivision(){ 
+let number2 = document.getElementById("num2").value;
+console.log(number2);
+let myResult2 = document.getElementById("result2");
+let division = number1/number2;
+division = parseInt(division);
+myResult2.innerHTML = "Division is:" + " "+ division
  }
 
- getDivision()
-
- let result = document.getElementById("result");
- result.innerHTML= getDivision();
- result = getMultiplication();
- 
+ const Value1 = document.getElementById("value1").value;
+ console.log(Value1);
