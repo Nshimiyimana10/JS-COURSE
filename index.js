@@ -369,3 +369,33 @@ myResult2.innerHTML = "Division is:" + " "+ division
 
  console.log(toCelciusConvert(100));
  console.log(toFahrenheit(250));
+
+ //Return absolute difference
+
+ function returnDiff(x){
+  let difference = x - 13;
+  if(x > 13){
+  return difference *2;
+  }
+  else{
+    return difference
+  }
+ }
+
+ console.log(returnDiff(30));
+
+ //sum of two integers 
+
+ function sumIntegers(a,b){
+  let sum = a+b;
+  if(a===b){
+    return sum*3;
+  }
+  else{
+    return sum;
+  }
+ }
+
+ console.log(sumIntegers(5,5));
+
+ //
