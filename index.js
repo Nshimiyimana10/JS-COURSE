@@ -349,3 +349,23 @@ myResult2.innerHTML = "Division is:" + " "+ division
 
  const Value1 = document.getElementById("value1").value;
  console.log(Value1);
+
+ //Celcius-Fahrenheit temperature converter
+
+ function toCelciusConvert(Fahrenheit){
+       let F = Fahrenheit;
+      let Celcius = (F-32)*5/9;
+      Celcius = Math.ceil(Celcius);
+      return Celcius;
+      
+ }
+
+ function toFahrenheit(Celcius){
+    let C = Celcius;
+    let Fahrenheit = (C + 32)*9/5;
+    Fahrenheit = Math.ceil(Fahrenheit)
+    return Fahrenheit;
+ }
+
+ console.log(toCelciusConvert(100));
+ console.log(toFahrenheit(250));
