@@ -398,4 +398,71 @@ myResult2.innerHTML = "Division is:" + " "+ division
 
  console.log(sumIntegers(5,5));
 
- //
+ //Difference between a number and 19
+
+ function getDifference(a){
+  let difference = a-19;
+  if(a > 19){
+    return difference *3;
+  }
+  else{
+    return difference;
+  }
+ }
+
+ console.log(getDifference(30));
+
+ //To check if one of numbers is 50 or their sum is 50
+ 
+ function checkTheNumber(a,b,c,d){
+  if((a===50||b===50||c===50||d===50)||(a+b+c+d===50)){
+     return true;
+  }
+  else{
+    return false;
+  }
+ }
+
+ console.log(checkTheNumber(10,5,20,50));
+
+ //Check range between 100 and 400
+
+ function checkTheRange(a){
+  if((a>=80 && a<=120) ||(a>=380 && a<=420)){
+    return true;
+  }
+  else{
+    return false;
+  }
+ }
+
+ console.log(checkTheRange(110));
+
+ //Check if is positive of negative
+
+ function checkPosOrNeg(a,b){
+   if((a<0 && b>=0)||(a>=0 && b<0)){
+    return true;
+   }
+
+   else{
+    return false;
+   }
+ }
+
+ console.log(checkPosOrNeg(5,-1))
+
+ //Add Py to the string
+
+ function addString(string){
+    //let newStr = string.slice(0,2);
+   //return newStr;
+   if(string.slice(0,2)==="Py"){
+      return string;
+   }
+   else{
+    return "Py"+string;
+   }
+ }
+
+ console.log(addString("Python"));
