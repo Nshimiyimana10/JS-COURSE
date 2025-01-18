@@ -503,3 +503,15 @@ function frontBack(string){
 }
 
 console.log(frontBack("government"));
+
+//To check if the number is multiple of 3 or 7
+
+function checkMultiple(number){
+    if(number % 3 === 0 || number % 7 ===0){
+       return true;
+    }
+    else{
+      return false;
+   }
+}
+console.log(checkMultiple(16))
