@@ -479,3 +479,27 @@ function replaceValue(str, pos){
 }
 
 console.log(replaceValue("application", "p"))
+
+//Swap first and last character of a string
+
+function swapChar(string){
+ let newStr = string.slice(1,-1);
+ let firstChar = string.charAt(0);
+ let secondChar = string.charAt(string.length-1);
+ let finalStr = secondChar + newStr + firstChar;
+
+ return finalStr;
+
+}
+
+console.log(swapChar("better"));
+
+//First string character added to the front and back
+
+function frontBack(string){
+  let firstChar = string.charAt(0);
+  let newStr = firstChar + string + firstChar;
+  return newStr;
+}
+
+console.log(frontBack("government"));
