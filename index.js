@@ -466,3 +466,16 @@ myResult2.innerHTML = "Division is:" + " "+ division
  }
 
  console.log(addString("Python"));
+
+ //Remove a specified character from a string
+ 
+ function removeChar(string, char_pos){
+     return string.split(char_pos).join("");
+ }
+console.log(removeChar("Peter", "t"))
+
+function replaceValue(str, pos){
+    return str.replace(pos, "")
+}
+
+console.log(replaceValue("application", "p"))
