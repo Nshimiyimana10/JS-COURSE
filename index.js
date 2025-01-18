@@ -528,3 +528,42 @@ else{
 }
 }
 console.log(threeChars("banana"));
+
+//To check if a string start with "Java"
+
+function checkStringWith(string){
+    if(string.startsWith("Java")){
+      return true;
+    }
+   else{
+    return false
+   }
+}
+console.log(checkStringWith("JavaScript"));
+
+//To check if two integers are in range of 50 and 99
+
+function checkRange(a,b){
+  if((a >=50 && a<=90)|| b>=50 && b <=90){
+      return true;
+  }
+  else{
+    return false
+  }
+}
+console.log(checkRange(70, 60))
+
+//To remove Script from the 5th position of a string
+
+function removeScript(string){
+    let firstStr = string.slice(0,4);
+    let secondStr = string.slice(10);
+    let newStr = firstStr + secondStr;
+   if(string.slice(4,10) === "Script"){
+      return newStr;
+   }
+   else{
+    return string;
+   }
+}
+console.log(removeScript("TypeScript"));
