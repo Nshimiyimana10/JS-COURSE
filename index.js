@@ -515,3 +515,16 @@ function checkMultiple(number){
    }
 }
 console.log(checkMultiple(16))
+
+//To take 3 characters of a string and add them at the front and back of the original string
+
+function threeChars(string){
+let lastChars = string.slice(-3);
+if(string.length >= 3){
+  return lastChars + string + lastChars;
+}
+else{
+    return string;
+}
+}
+console.log(threeChars("banana"));
