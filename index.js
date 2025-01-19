@@ -567,3 +567,255 @@ function removeScript(string){
    }
 }
 console.log(removeScript("TypeScript"));
+
+//To find the largest integer in pair of 3 
+
+function findLargest(a,b,c){
+  if(a>b&&a>c){
+   return a;
+  }
+  else if(b>a&&b>c){
+    return b;
+  }
+  else if(c>a&&c>b){
+   return c;
+  }
+  else{
+    return a||b||c
+  }
+}
+console.log(findLargest(10,10,10));
+
+//To find the closest number to 100 between two numbers
+
+function closestNumber(a,b){
+  if((100-a) < (100-b)){
+   return a;
+  }
+  else if((100-b) < (100-a)){
+   return b;
+  }
+  else{
+    return "Both numbers are equal, so they're closest to 100"
+  }
+}
+console.log(closestNumber(50,40))
+
+//To check if two numbers are in the range of 40-60 or 70-100
+
+function checkTwoRanges(a,b){
+  if(((a>=40 && a<=60)||(b>=40 && b<=60))||((a>=70 && a<=100)||(b>=70 && b<=100))){
+    return true;
+  }
+  else{
+    return false
+  }
+}
+console.log(checkTwoRanges(80,80))
+
+//To find larger number in range 40&60
+
+function largerNumber(a,b){
+  if((a>=40 && a<=60) && (a>b)){
+    return a;
+  }
+  else if((b>=40 && b<=60) && (b>a)){
+    return b;
+  }
+  else{
+    return "The number given is not in the range provided"
+  }
+}
+console.log(largerNumber(50,20));
+
+//To check if specified character is in the range provided
+
+function checkCharPosition(string,char){
+    if(string.charAt(1)&&string.charAt(3)===char){
+      return true;
+    }
+    else{
+        return false;
+    }
+}
+console.log(checkCharPosition("chaha","h"));
+
+//To check if last digit of 3 digits is the same
+
+function checkLastDigit(a,b,c){
+ let firstNum = a.toString();
+ let secondNum = b.toString();
+ let thirdNum = c.toString();
+ if(firstNum.slice(-1) === secondNum.slice(-1) && secondNum.slice(-1) === thirdNum.slice(-1)){
+   return true;
+ }
+ else{
+    return false;
+ }
+}
+console.log(checkLastDigit(35,226,3245));
+
+//Convert 3 first characters in lower case
+
+function convertChar(string){
+    let remainStr = string.slice(3);
+  if(string.length > 3){
+    return string.slice(0,3).toLowerCase() + remainStr;
+  }
+  else{
+    return string.toUpperCase();
+  }
+}
+console.log(convertChar("cat"));
+
+//To compute sum of two integers
+
+function computeSum(num1,num2){
+    let sum = num1+num2;
+  if(sum >=50 && sum<=89){
+     return 65
+  }
+  else{
+    return 80
+  }
+}
+console.log(computeSum(40, 30))
+
+//To check if one of two integers is 8
+
+function checkIntegerSum(a,b){
+  if((a===8)||(b===8)||(a+b===8)){
+   return true;
+  }
+  else{
+    return false
+  }
+}
+console.log(checkIntegerSum(8, 5))
+
+//Check equality of three numbers
+
+function checkThreeNumbers(num1,num2,num3){
+     if(num1 === num2 && num2 === num3){
+       return 30;
+     }
+     else if(((num1==num2) && num1!==num3)||((num1==num3) && num1!==num2)||((num2==num3)&&num2!==num1)){
+        return 40;
+     }
+     else{
+        return 20;
+     }  
+} 
+console.log(checkThreeNumbers(10,10,10)) 
+
+//To check if numbers are increasing in strict mode or soft mode
+
+function checkStrictOrSoft(a,b,c){
+  if(a<b && b<c){
+    return "Given numbers are increasing in strict mode"
+  }
+  else{
+    return "Given numbers are increasing in soft mode"
+  }
+}
+console.log(checkStrictOrSoft(10,8,30));
+
+//To check if two or all of the given numbers have the same rightmost digit
+
+function checkRightMost(a,b,c){
+  let num1 = a % 10;
+  let num2 = b % 10;
+  let num3 = c % 10;
+  if(((num1==num2) && num1!==num3) 
+    || ((num2===num3) && num2!==num3) 
+    || ((num1==num3) && num1!==num2) 
+    ||(num1==num2 && num2==num3)){
+      
+        return true;
+  }
+  else{
+    return false
+  }
+}
+console.log(checkRightMost(20,31, 22));
+
+//check given value if it's 15
+
+function checkGivenValue(a,b){
+   if(a==15 || b==15 || (a+b==15) || (a-b==15) || (b-a==15)){
+    return true;
+   }
+   else{
+    return false;
+   }
+}
+console.log(checkGivenValue(2,5,0))
+
+//To check if one integer is multiple of 7 or 11
+
+function checkMultiple(a,b){
+  if((a % 7 == 0 && b % 7!==0) ||(a % 11 == 0 && b % 11!==0) ){
+    return true;
+  }
+  else{
+    return false
+  }
+}
+console.log(checkMultiple(10,20))
+
+//Reverse a given string
+
+function reverseString(string){
+  let newStr = string.split("").reverse().join("");
+  return newStr;
+}
+console.log(reverseString("education"));
+
+//Capitalize the first letter in a string
+
+function capitalizeWord(string){
+let newStr = string.split(" ");
+for(let i =0; i<newStr.length;i++){
+  newStr[i] = newStr[i].charAt(0).toUpperCase() + newStr[i].slice(1);
+}
+ return newStr.join(" ");
+}
+console.log(capitalizeWord("the earth revolves around the sun"))
+
+//Second method of map method
+
+function capWord(string){
+ let newWord = string.split(" ");
+ let newCap = newWord.map((word)=>
+    word.charAt(0).toUpperCase() + word.slice(1)
+ )
+return newCap.join(" ");
+}
+
+console.log(capWord("Let us pray God as he is super power"))
+
+//Transform given numerical value into hours and minutes
+
+function hoursMinutes(minutes){
+   let hours = Math.floor(minutes/60);
+   let remainingMin = Math.ceil((minutes % 60));
+
+   return `${minutes} minutes consists of ${hours} hours and ${remainingMin} minutes`
+}
+console.log(hoursMinutes(170));
+
+//Sorting letters of a given string alphabetically
+
+function sortingLetters(string){
+   let sortWord = string.split("");
+   return sortWord.sort().join("")
+}
+console.log(sortingLetters("education"))
+
+//Sorting numbers of an array in ascending order
+
+function sortingNumbers(myArray){
+  let newNums = myArray.sort((a,b)=>a-b);
+  return newNums;
+}
+console.log(sortingNumbers([10,100,25,8,1000,6]))
