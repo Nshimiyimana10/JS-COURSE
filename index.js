@@ -819,3 +819,75 @@ function sortingNumbers(myArray){
   return newNums;
 }
 console.log(sortingNumbers([10,100,25,8,1000,6]))
+
+//To check whether a and b are separated by 3 places in a string
+
+function checkVowels(string){
+ let letterA = "a";
+ let letterB = "b";
+ if((string.indexOf(letterA)-string.indexOf(letterB) == 3)|| 
+    (string.indexOf(letterB)-string.indexOf(letterA) == 3)){
+  return true;
+ }
+ else{
+    return "Given characters are not separated by 3 places or they are not present in given string"
+ }
+
+}
+console.log(checkVowels("benadiction"));
+
+//To count the number of vowels in a string
+
+function countVowels(string){
+  let newStr = string.toLowerCase();
+  let vowels = newStr.match(/[iuoae]/g);
+  return vowels.length
+}
+console.log(countVowels("examination"))
+
+//To check whether a given string contains the same number of p and t
+
+function checkVowelEquality(string){
+  let letterP = string.toLowerCase().match(/[p]/g).length;
+  let letterT = string.toLowerCase().match(/[t]/g).length;
+  if(letterP === letterT){
+     return "The number of p and t in given string is the same"
+  }
+  else{
+    "The number of p and t in the given string is not the same "
+  }
+}
+console.log(checkVowelEquality(" There are many pineapples in TOYOTA car"))
+
+//String repeated n times
+
+function repeatedStr(string, number){
+   let newStr = string.repeat(number)
+   return newStr;
+}
+console.log(repeatedStr("man",3))
+
+//Four copies of last 3 characters of a string 
+
+function lastCopies(string){
+   let lastChars = string.slice(-3);
+   if(string.length < 3){
+     return "";
+   }
+   else{
+    return lastChars.repeat(4)
+   }
+}
+console.log(lastCopies("play"));
+
+//Extract first half of an even string
+
+function firstHalfStr(string){
+   if(string.length % 2 ===0){
+     return string.slice(0,(string.length/2))
+   }
+   else{
+    return "The string length is not even"
+   }
+}
+console.log(firstHalfStr("developments"))
