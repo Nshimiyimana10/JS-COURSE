@@ -891,3 +891,267 @@ function firstHalfStr(string){
    }
 }
 console.log(firstHalfStr("developments"))
+
+//To remove the first and last characters from a string 
+
+function firstAndLastChars(string){
+     return string.slice(1,string.length-1)
+}
+console.log(firstAndLastChars("education"));
+
+//Concatenate two strings without their first two characters 
+
+function concatenateStr(string1,string2){
+   let str1 = string1.slice(1);
+   let str2 = string2.slice(1);
+   return str1 + str2;
+}
+console.log(concatenateStr("economy","finance"));
+
+//Move the last three string characters in the beginning
+
+function lastThreeChars(string){
+   let lastChars = string.slice(-3);
+   if(string.length >=3){
+     return lastChars + string;
+   }
+   else{
+    return "string length is not yet completed"
+   }
+}
+console.log(lastThreeChars("california"));
+
+//Concatenate two Strings of the same length
+
+function twoStrings(string1,string2){
+    if(string1.length == string2.length){
+      return string1 + string2
+    }
+    else if(string1.length > string2.length){
+       return string1.slice(0, string2.length) + string2;
+    }
+      
+    else if(string2.length > string1.length){
+      return string1 + string2.slice(0, string1.length);
+    }
+}
+console.log(twoStrings("m", "cat"))
+
+//To check if string ends with Script
+
+function checkEnd(string){
+   if(string.endsWith("Script")){
+      return true;
+   }
+   else{
+    return "String does not ends with Script or the provided string length is not correct"
+   }
+}
+console.log(checkEnd("Type"));
+
+//To display city name if the string starts with Los or New
+
+function cityName(string){
+   if(string.startsWith("Los") || string.startsWith("New")){
+       return string;
+   }
+   else{
+    return ""
+   }
+}
+console.log(cityName("NewYork"))
+
+//Remove p from the string
+
+function removeChar(string){
+ if(string.startsWith("P") && string.endsWith("P")){
+    return string.slice(1, string.length-1)
+ }
+ else if(string.startsWith("P") && !string.endsWith("P")){
+  return string.slice(1)
+ }
+ else if(!string.startsWith("P") && string.endsWith("P")){
+   return string.slice(0, string.length)
+ }
+ else{
+    return string;
+ }
+}
+console.log(removeChar("PenergyP"));
+
+//create new string composed of 1 and last characters of original string
+
+function firstLastChar(string){
+  let str1 = string.charAt(0);
+  let str2 = string.charAt(string.length-1);
+  let newStr = str1 + str2;
+  return newStr;
+}
+console.log(firstLastChar("London"))
+
+//To sum up 3 numbers in an array
+
+function threeIntegers(myArray){
+   let sum = myArray.reduce((acc,curr) =>{
+      return acc + curr;
+   },0)
+   return sum;
+}
+console.log(threeIntegers([10,20,30]))
+
+function sumIntegers(myArray){
+   let sum = 0;
+   for(let i = 0; i<myArray.length; i++){
+     sum += myArray[i];
+   }
+   return sum;
+}
+console.log(sumIntegers([10,20,5]))
+
+//To check whether 1 appear on 1st or last position of an array
+
+function checkArrayPos(myArray){
+  if((myArray.length>=1) && (myArray[0] == 1 || myArray[myArray.length-1] == 1)){
+    return true;
+  }
+  else{
+    return false
+  }
+}
+console.log(checkArrayPos([1,2,3,4]))
+
+//Check if 1st and last elements are the same in an array of integers of 3
+
+function checkTheSame(myArray){
+    if((myArray.length ==3) && (myArray[0] === myArray[myArray.length-1])){
+       return true 
+    }
+    else{
+        return false
+    }   
+}
+console.log(checkTheSame([1,2,1]))
+
+//Reverse elements of an array
+
+function reverseArray(myArray){
+  let newArr = myArray.reverse();
+  if(myArray.length == 3){
+      return newArr;
+  }
+  else{
+    return "condition not satisfied!"
+  }
+}
+console.log(reverseArray([2,4,6]))
+
+//To check the largest value between the first and last elements
+
+function largerValue(myArray){
+ let largeValue = Math.max(...myArray);
+ let newArr = myArray.map(() => largeValue);
+ return newArr;
+}
+console.log(largerValue([10,30,50]))
+//To create an array of middle integers of an array
+
+function middleElsArray(array1,array2){
+  let arr1 = array1[1];
+  let arr2 = array2[1];
+  let newArr = [];
+      newArr.push(arr1);
+      newArr.push(arr2);
+      
+  return newArr;
+}
+console.log(middleElsArray([1,2,3],[4,5,6]));
+
+// First and last elements of an array
+
+function firstAndLastEls(array1){
+   let el1 = array1[0];
+   let el2 = array1[array1.length-1];
+   let newArr = [];
+       newArr.push(el1)
+       newArr.push(el2)
+   if(array1.length >=1){
+     return newArr;
+   }
+   else{
+    return "Array condition is not satisfied"
+   }
+}
+console.log(firstAndLastEls([1,2,3,4]));
+
+//To check if an array contains 1 or 3
+
+function checkOneOrThree(array1){
+   if((array1.length == 2) && (array1[0] == 1 || array1[1] == 3)){
+      return true
+   }
+   else{
+    return false
+   }
+}
+console.log(checkOneOrThree([1,3]))
+
+//Check whether an array contains 30 and 40 twice 
+
+function checkDouble(array1){
+  if((array1.length<=2) && ((array1[0]==30 && array1[1]==30)||(array1[0]==40 && array1[1]==40))){
+     return true
+  }
+  else{
+    return false
+  }
+}
+console.log(checkDouble([30,30]))
+
+//To reverse a number 
+
+function reverseNumber(number){
+    let num = number.toString().split("").reverse().join("");
+    return Number(num);
+}
+console.log(reverseNumber(43567));
+//check palindrome
+
+function checkPalindrome(string){
+  let newStr = string.split("").reverse().join("");
+  if((newStr.toUpperCase()||newStr.toLowerCase()) === (string.toUpperCase()||string.toLowerCase())){
+    return true;
+  }
+  else{
+    return false
+  }
+}
+console.log(checkPalindrome("madam"));
+
+//To sort string alphabetically
+
+function sortString(string){
+ let newStr = string.split("").sort();
+ return newStr.join("")
+};
+console.log(sortString("demand"))
+
+//Capitalize each word in a string
+
+function capitalizeWord(string){
+let newStr = string.split(" ");
+let capWord = newStr.map((word) =>word.charAt(0).toUpperCase() + word.slice(1)) 
+return capWord.join(" ");
+}
+console.log(capitalizeWord("the blood of jesus is of high price"))
+
+//To find the longest word in a string
+
+function longestWord(string){
+ let newStr = string.split(" ");
+ let strLength = newStr.map((word =>word.length));
+ let longIndex = Math.max(...strLength);
+ let strIndex = strLength.indexOf(longIndex);
+ let longWord = newStr[strIndex];
+ return longWord;
+}
+console.log(longestWord("richest man on the planet"))
