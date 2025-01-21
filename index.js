@@ -1149,9 +1149,61 @@ console.log(capitalizeWord("the blood of jesus is of high price"))
 function longestWord(string){
  let newStr = string.split(" ");
  let strLength = newStr.map((word =>word.length));
- let longIndex = Math.max(...strLength);
- let strIndex = strLength.indexOf(longIndex);
+ let longIndex = Math.max(...strLength); //7
+ let strIndex = strLength.indexOf(longIndex);//0
  let longWord = newStr[strIndex];
  return longWord;
 }
 console.log(longestWord("richest man on the planet"))
+
+//To count vowels in a string
+
+function countVowels(string){
+ let vowels = string.match(/[iuoaeIUOAE]/g);
+ return vowels.length;
+}
+console.log(countVowels("mAnipulation"));
+
+//To find the second lowest and second largest number in an array
+
+function lowestLargest(array){
+    let newArr = [...new Set(array)].sort((a,b) => a-b);
+    let lowest = newArr[1];
+    let largest = newArr[newArr.length-2];
+
+    return [lowest,largest];
+ } 
+ console.log(lowestLargest([10,40,30,15,60]));
+
+ //Check perfect number 
+
+ function checkPerfect(number){
+    let sum = 0;
+    for(let i = 1; i <= number/2; i++){
+        if(number % i ===0){
+          sum+= i;
+        }
+    }
+    if(sum === number){
+       return true;
+    }
+    else if(number <= 1){
+      return "This number can not be a prime"
+    }
+    else{
+        return false
+    }
+ }
+ console.log(checkPerfect(30));
+
+ //Factor of a number 
+
+ function factorNumber(number){
+   for(let i = 1; i <= number;){
+     if(number % i ===0){
+      return i++;
+     }
+   }
+   return i;
+ }
+ console.log(factorNumber(12))
