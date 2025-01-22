@@ -1241,3 +1241,15 @@ function lowestLargest(array){
     return oneStr;
  }
  console.log(nonRepeat("mathematics"));
+
+ //Longest country name
+ function countryName(array){
+   let newArr = array.map((num)=>num.length);
+   let longIndex = Math.max(...newArr);//10
+   let longInd = newArr.indexOf(longIndex);//2
+   let finalWord = array[longInd];
+   return finalWord;
+  
+ }
+
+ console.log(countryName(["rwanda","Uganda","Tanzania","madagascar"]))
