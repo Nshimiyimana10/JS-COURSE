@@ -1207,3 +1207,37 @@ function lowestLargest(array){
    return i;
  }
  console.log(factorNumber(12))
+
+ //To find number of specified occurence of letter 
+
+ function letterOccurence(string,letter){
+      let newStr1 = string.toLowerCase();
+      let newStr2 = string.split("")
+      for(let i = 0; i <= newStr2.length; i++){
+       if(newStr2[i] === letter){
+          return `The letter ${letter} occurs ${newStr2[i].length} time(s) in this string!` 
+       }
+       else{
+        `No ${letter} found in this string`
+       }
+      }
+ }
+ console.log(letterOccurence("education", "c"))
+
+ //To find non-repeat character in js 
+
+ function nonRepeat(string){
+    let newStr = string.toLowerCase();
+    let newStr2 = newStr.split("");
+    let oneStr = [];
+    for(let i = 0; i<=newStr2.length; i++){
+       if(newStr2[i].length ===1 ){
+          return oneStr.push(newStr2[i])
+       }
+       else{
+        return "";
+       }
+    }
+    return oneStr;
+ }
+ console.log(nonRepeat("mathematics"));
