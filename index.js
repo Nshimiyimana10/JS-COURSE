@@ -1263,3 +1263,13 @@ function lowestLargest(array){
  }
  console.log(largestInteger([10,30]))
  
+ //Sign of product of three numbers
+
+ function signThreeNum(a,b,c){
+    let result = a*b*c;
+   if(result >= 0){
+    return `The sign of ${result} is +`
+   }
+   return `The sign of ${result} is -`
+ }
+ console.log(signThreeNum(4,7,8))
