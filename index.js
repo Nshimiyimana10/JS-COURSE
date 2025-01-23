@@ -1272,4 +1272,12 @@ function lowestLargest(array){
    }
    return `The sign of ${result} is -`
  }
- console.log(signThreeNum(4,7,8))
+ console.log(signThreeNum(4,7,8));
+
+ //To sort three numbers
+
+ function sortThreeNum(array){
+  let newNum = array.sort((a,b) => b-a);
+  return newNum;
+ }
+ console.log(sortThreeNum([-5,10,15]))
