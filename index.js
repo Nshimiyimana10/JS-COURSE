@@ -1253,3 +1253,13 @@ function lowestLargest(array){
  }
 
  console.log(countryName(["rwanda","Uganda","Tanzania","madagascar"]))
+
+ //To display the largest integer 
+
+ function largestInteger(array){
+       largeNum = array.sort((a,b) => b-a);
+       let num = largeNum[0];
+       return num;
+ }
+ console.log(largestInteger([10,30]))
+ 
