@@ -1281,3 +1281,103 @@ function lowestLargest(array){
   return newNum;
  }
  console.log(sortThreeNum([-5,10,15]))
+
+ //Largest of five numbers
+
+ function largeNumArray(array){
+   let num = array.sort((a,b) => b-a)
+   let num2 = num[0]
+   return num2;
+ }
+ console.log(largeNumArray([-5,-3,0,10,6]))
+
+ //To check odd or even number 
+
+ function oddOrEven(){
+  let result = [];
+  for(let i= 0; i<=15;i++){
+   if(i % 2 ===0){
+     result.push(`${i} is even number`)
+   }
+   else{
+     result.push(`${i} is odd number`)
+   }
+  }
+  return result;
+ }
+ console.log(oddOrEven())
+
+ //To find average score of marks
+
+ function findAverage(score){
+  let result = [];
+  for(let i = 0; i < score.length; i++){
+     if(score[i].marks >= 90 && score[i].marks <=100 ){
+        result.push(`${score[i].name} got "A" grade`);
+     }
+     else if(score[i].marks >= 80 && score[i].marks <=89){
+        result.push(`${score[i].name} got "B" grade`);
+     }
+     else if(score[i].marks >= 70 && score[i].marks <=79){
+      result.push(`${score[i].name} got "C" grade`);
+    }
+    else if(score[i].marks >= 60 && score[i].marks <=69){
+      result.push(`${score[i].name} got "D" grade`);
+    }
+    else if(score[i].marks >= 50 && score[i].marks <=59){
+      result.push(`${score[i].name} got "E" grade`);
+    }
+    else{
+      result.push(`${score[i].name} You fail`);
+    }
+  }
+  return result
+ }
+ console.log(findAverage([{name: "David", marks: 80},
+                          {name: "Angel", marks: 60},
+                          {name: "Peter", marks: 90},
+                          {name: "John",  marks: 55},
+                          {name: "Chris", marks: 70}
+ ]))
+
+ //FizzBuzz
+
+ function rangeNumbers(){
+  let result = [];
+  for(let i = 1; i <= 100; i++){
+    if(i % 3 ===0 && i % 5 === 0){
+      result.push(`${i}:FizzBuzz`);
+    }
+    else if(i % 3 === 0){
+      result.push(`${i}:Fizz`);
+    }
+    else if(i % 5 === 0){
+      result.push(`${i}:Buzz`);
+    }
+    else{
+      ""
+    }
+  }
+  return result;
+ }
+ console.log(rangeNumbers());
+
+ //To find Armstrong number
+
+ function armStrongNum(number){
+  let num1 = number.toString().split(""); //["3","7","1"]
+  let num2 = num1.map((el) => Math.pow(el,num1.length));
+  let num3 = num2.reduce((acc,currVal) =>{
+    return acc + currVal;
+  },0)
+  let num4 = Number(num3);
+  if(num4 === number){
+    return `${num4} is an Armstrong number`;
+  }
+  else{
+    return `${num4} is not an Armstrong number`;
+  }
+  
+ }
+ console.log(armStrongNum(371))
+ 
