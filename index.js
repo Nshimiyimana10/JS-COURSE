@@ -1492,3 +1492,18 @@ function removeDuplicates(array){
   return newArr;
 }
 console.log(removeDuplicates([1,1,2,3,3,4,5]))
+
+//T find a leap year in a given range 
+
+function findReapYear(years){
+  let leap = years.map((year) =>{
+    if(year % 4 ==0 && year % 100 !==0 || year % 400 ==0){
+       return {year: year, isLeap: true};
+    }
+    else{
+      return {year: year, isLeap: false};
+    }
+  })
+  return leap;
+}
+console.log(findReapYear([2025, 1900, 2000]))
