@@ -1436,5 +1436,51 @@ function lowestLargest(array){
  }
  console.log(insertDash(12487))
 
+ //Swap case in a string
+
+ function swapCase(string){
+   let newStr = string.split("");
+   let newStr2 = newStr.map((el) =>{
+    if(el === el.toUpperCase()){
+       return el.toLowerCase();
+    }
+    else{
+      return el.toUpperCase();
+    }
+   })
+   return newStr2.join("");
+ }
+ console.log(swapCase("The Quick Brown Fox In the River"))
+
+ //Sum of squares in an array
  
- 
+ function sumOfSquares(array){
+   let num1 = array.map((el) =>Math.pow(el,2)).reduce((acc,curr)=>{
+    return acc + curr;
+   },0)
+   return num1;
+ }
+ console.log(sumOfSquares([2,4,5,12,345]))
+
+ //Sum and product of an array integers
+
+ function sumProduct(array){
+   let result = array.reduce((acc,curr) =>{
+    acc.sum+= curr;
+    acc.product*= curr;
+     return acc;
+    
+   },{sum:0, product:1})
+   return result;
+ }
+ console.log(sumProduct([1,3,6,5]))
+
+ //Adding elements to an empty array
+
+ function addingEmpty(array){
+    array[0] = 10;
+    array[1] = 20;
+    array[2] = 30;
+    return array;
+ }
+console.log(addingEmpty([]))
