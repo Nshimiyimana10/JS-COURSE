@@ -1400,4 +1400,41 @@ function lowestLargest(array){
    return newArr;
  }
  console.log(cloningArray([20,40,60]))
+
+ //Getting first element of an array
+
+ function firstElement(array){
+  if(array.length <=0){
+     return "This array is empty"
+  }
+  else{
+    return array[0];
+  }
+ }
+ console.log(firstElement([1,2,4]))
+
+ //To join the elements of an array into one string 
+
+ function joinArray(array){
+  let newArr = array.join(" ");
+  return newArr;
+ }
+ console.log(joinArray(["Tomato","is","good","for","life"]))
+
+ //To insert dash in front of even number 
+
+ function insertDash(number){
+   let num1 = number.toString().split("");
+   let num2 = num1.map((el) =>{ 
+    if(el % 2 === 0){
+      return "-" + el;
+    }
+  else{
+    return el;
+  }})
+  return num2.join("")
+ }
+ console.log(insertDash(12487))
+
+ 
  
