@@ -1380,4 +1380,24 @@ function lowestLargest(array){
   
  }
  console.log(armStrongNum(371))
+
+ //To check if an input is an array
+
+ function checkArray(input){
+    if(Array.isArray(input) === true){
+       return "The input value is an array"
+    }
+    else{
+      return "The input value is not an array"
+    }
+ }
+ console.log(checkArray([1,2,3]))
+
+ //Cloning an array
+
+ function cloningArray(array){
+   let newArr = [...array]
+   return newArr;
+ }
+ console.log(cloningArray([20,40,60]))
  
