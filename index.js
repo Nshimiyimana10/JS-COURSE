@@ -1493,7 +1493,7 @@ function removeDuplicates(array){
 }
 console.log(removeDuplicates([1,1,2,3,3,4,5]))
 
-//T find a leap year in a given range 
+//To find a leap year in a given range 
 
 function findReapYear(years){
   let leap = years.map((year) =>{
@@ -1507,3 +1507,37 @@ function findReapYear(years){
   return leap;
 }
 console.log(findReapYear([2025, 1900, 2000]))
+
+//To return new array with the numbers added for two arrays
+
+function returnArray(array1, array2){
+
+  if(array1.length !==array2.length){
+   throw new Error("The arrays must have equal lengths!")
+  }
+  return array1.map((num,index) => num + array2[index])   
+}
+console.log(returnArray([23,14,6,8],[-1,2,6,5]))
+
+//To find duplicate values in an array
+
+function findDuplicate(array){
+  let newArr = array.map((el,index) =>{
+    if(el[index] === el[index]){
+      return el[index];
+    }
+    else{
+      return el;
+    }
+  })
+  return newArr;
+}
+console.log(findDuplicate([2,2,3,4]))
+
+//To remove repeated integer in an array
+
+function checkSet(array){
+ let newArr = [...new Set(array)];
+ return newArr;
+}
+console.log(checkSet([1,2,3,4,4,3]))
