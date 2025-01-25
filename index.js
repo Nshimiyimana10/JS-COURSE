@@ -1484,3 +1484,11 @@ function lowestLargest(array){
     return array;
  }
 console.log(addingEmpty([]))
+
+//To remove duplicates from an array
+
+function removeDuplicates(array){
+  let newArr = [...new Set(array)]
+  return newArr;
+}
+console.log(removeDuplicates([1,1,2,3,3,4,5]))
