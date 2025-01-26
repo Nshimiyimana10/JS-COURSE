@@ -1534,10 +1534,26 @@ function findDuplicate(array){
 }
 console.log(findDuplicate([2,2,3,4]))
 
-//To remove repeated integer in an array
+//To remove repeated integer in an array   
 
 function checkSet(array){
  let newArr = [...new Set(array)];
  return newArr;
 }
 console.log(checkSet([1,2,3,4,4,3]))
+
+//To remove falsy values 
+
+function removeFalsyValues(array){
+  let newArr = array.filter(Boolean);
+  return newArr;
+}
+console.log(removeFalsyValues([1,0,NaN,undefined,"",2,null]))
+
+//To merge two arrays without duplicates 
+
+function mergeArray(array1,array2){
+   let newArr = array1.concat(array2);
+   return [...new Set(newArr)];
+}
+console.log(mergeArray([12,4,3,4,6,8],[4,3,15,7,8]))
