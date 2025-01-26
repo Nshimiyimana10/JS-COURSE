@@ -1557,3 +1557,24 @@ function mergeArray(array1,array2){
    return [...new Set(newArr)];
 }
 console.log(mergeArray([12,4,3,4,6,8],[4,3,15,7,8]))
+
+//To generate an array between two integers 
+
+function generateArray(num1,num2){
+  let newArr = []
+  for(let i = num1; i <= num2; i++){
+     newArr.push(i)
+  }
+  return newArr;
+}
+console.log(generateArray(5,10))
+
+//To find third smallest number in an array
+
+function checkSmallestNum(array){
+   let newNum = array.sort((a,b) => a -b)
+   return [...new Set(newNum)][2];
+}
+console.log(checkSmallestNum([1,2,5,1,0,2]))
+
+//
