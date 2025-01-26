@@ -1577,4 +1577,18 @@ function checkSmallestNum(array){
 }
 console.log(checkSmallestNum([1,2,5,1,0,2]))
 
-//
+//To find the sum of numbers in a mixed array
+
+function mixedArray(array){
+  let newArr = [];
+  let newNum = array.filter((el) =>{
+    if(typeof el ==="number" && el % 1 === 0){
+      return newArr.push(el)
+    }
+  })
+  return newNum.reduce((acc,curr) =>{
+    return acc + curr;
+  },0)
+  
+}
+console.log(mixedArray([1,2,NaN,"","abc",6]))
