@@ -1592,3 +1592,56 @@ function mixedArray(array){
   
 }
 console.log(mixedArray([1,2,NaN,"","abc",6]))
+
+//To get index where NaN is found in an array
+
+function getIndexOf(array){
+    let newArr = []
+    let array2 = array.filter((el,index) =>{
+      if(Number.isNaN(el)){
+        return newArr.push(index)
+      }
+    })
+    return newArr;
+}
+console.log(getIndexOf([1,2,NaN,4,NaN]))
+
+//To check if a given input is an array
+
+function checkInsideArray(array){
+  let newArr = [];
+  for(let i = 0; i <= array.length; i++){
+     if(Array.isArray(array[i])){
+       newArr.push(array[i])
+     }
+  }
+  return newArr.length;
+}
+console.log(checkInsideArray([1,[1,2],"good",[5,6]]))
+
+//Button on click 
+
+//Button.addEventListener("click", clickButton)
+
+//function clickButton(){
+  //return console.log("The button is clicked")
+//}
+
+//Change background for mouseover
+let Button = document.getElementById("clickBtn");
+Button.addEventListener("mouseover", changeBackGround)
+Button.addEventListener("mousedown",mouseDown)
+
+function changeBackGround(){
+  let body = document.querySelector("body");
+  body.style.backgroundColor = "blue";
+  return body;
+}
+function mouseDown(){
+  let body = document.querySelector("body")
+  body.style.backgroundColor = "green";
+  return body;
+}
+
+//Form validation
+
