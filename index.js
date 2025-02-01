@@ -1645,5 +1645,13 @@ function mouseDown(){
 
 //Form validation APPLICATION
 
-
+let fName = document.getElementById("first-name");
+let lname = document.getElementById("last-name");
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+let confirmPassword = document.getElementById("confirm-password");
+let textMessage = document.getElementById("message");
+let radioBtn = document.getElementById("radio");
+let button = document.getElementById("submit-btn");
+let 
 
