@@ -1653,5 +1653,11 @@ let confirmPassword = document.getElementById("confirm-password");
 let textMessage = document.getElementById("message");
 let radioBtn = document.getElementById("radio");
 let button = document.getElementById("submit-btn");
-let 
+let firstName_error = document.getElementById("firstname_error");
+let lastName_error = document.getElementById("lastname_error");
+let email_error = document.getElementById("email_error");
+let password_error = document.getElementById("password_error");
+let confirm_error = document.getElementById("confirm_error");
+let message_error = document.getElementById("message_error");
+let radio_error = document.getElementById("radio_error");
 
