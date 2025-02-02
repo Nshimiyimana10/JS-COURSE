@@ -1644,20 +1644,88 @@ function mouseDown(){
 }
 
 //Form validation APPLICATION
+document.addEventListener("DOMContentLoaded", function () {
+  let fName = document.getElementById("first_name");
+  let lName = document.getElementById("last_name");
+  let email = document.getElementById("email");
+  let password = document.getElementById("password");
+  let confirmPassword = document.getElementById("confirm_password");
+  let textMessage = document.getElementById("message");
+  let checkboxBtn = document.getElementById("checkbox");
+  let button = document.getElementById("submit_btn");
+  let firstName_error = document.getElementById("firstname_error");
+  let lastName_error = document.getElementById("lastname_error");
+  let email_error = document.getElementById("email_error");
+  let password_error = document.getElementById("password_error");
+  let confirm_error = document.getElementById("confirm_error");
+  let message_error = document.getElementById("message_error");
+  let checkbox_error = document.getElementById("checkbox_error");
 
-let fName = document.getElementById("first-name");
-let lname = document.getElementById("last-name");
-let email = document.getElementById("email");
-let password = document.getElementById("password");
-let confirmPassword = document.getElementById("confirm-password");
-let textMessage = document.getElementById("message");
-let radioBtn = document.getElementById("radio");
-let button = document.getElementById("submit-btn");
-let firstName_error = document.getElementById("firstname_error");
-let lastName_error = document.getElementById("lastname_error");
-let email_error = document.getElementById("email_error");
-let password_error = document.getElementById("password_error");
-let confirm_error = document.getElementById("confirm_error");
-let message_error = document.getElementById("message_error");
-let radio_error = document.getElementById("radio_error");
+  function formValidation(event) {
+
+    event.preventDefault();
+    // First Name Validation
+    if (fName.value.trim() === "") {
+      firstName_error.innerHTML = "Please enter valid first name";
+      firstName_error.style.color = "red";
+      fName.style.border = "2px solid red";
+    } else {
+      fName.style.border = "2px solid green";
+    }
+
+    // Last Name Validation
+    if (lName.value.trim() === "") {
+      lastName_error.innerHTML = "Please enter valid last name";
+      lastName_error.style.color = "red";
+      lName.style.border = "2px solid red";
+    } else {
+      lName.style.border = "2px solid green";
+    }
+
+    // Email Validation
+    if (email.value.trim() === "") {
+      email_error.innerHTML = "Please enter valid email";
+      email_error.style.color = "red";
+      email.style.border = "2px solid red";
+    } else {
+      email.style.border = "2px solid green";
+    }
+
+    // Password Validation
+    if (password.value.trim().length < 8) {
+      password_error.innerHTML = "Password must be at least 8 characters";
+      password_error.style.color = "red";
+      password.style.border = "2px solid red";
+    } else {
+      password.style.border = "2px solid green";
+    }
+
+    // Confirm Password Validation
+    if (password.value !== confirmPassword.value) {
+      confirm_error.innerHTML = "Passwords must match";
+      confirmPassword.style.border = "2px solid red";
+      confirm_error.style.color = "red";
+    } else {
+      confirmPassword.style.border = "2px solid green";
+    }
+
+    // Message Validation
+    if (textMessage.value.trim() === "") {
+      message_error.innerHTML = "Please enter your message here";
+      message_error.style.color = "red";
+      textMessage.style.border = "2px solid red";
+    } else {
+      textMessage.style.border = "2px solid green";
+    }
+
+    // Checkbox Validation
+    if (checkboxBtn.checked === false) {
+      checkbox_error.innerHTML = "Please accept our terms and conditions";
+      checkbox_error.style.color = "red";
+    } else {
+      checkbox_error.innerHTML = ""; // Clear error message when checked
+    }
+  }
+  button.addEventListener("click", formValidation)
+});
 
