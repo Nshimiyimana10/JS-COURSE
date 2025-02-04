@@ -1752,7 +1752,9 @@ const response = await fetch("https://jsonplaceholder.typicode.com/users");
        throw new error("Failed to fetch the data")
     }
     const data = await response.json();
-    console.log(data);
+   // console.log(data);
+    const userNames = data.map(user =>user.name +" " + "k.a" + " " + user.username);
+    console.log(userNames);
   }
   catch(error){
      console.error("error",error);
