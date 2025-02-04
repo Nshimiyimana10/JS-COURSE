@@ -1660,15 +1660,20 @@ document.addEventListener("DOMContentLoaded", function () {
   let confirm_error = document.getElementById("confirm_error");
   let message_error = document.getElementById("message_error");
   let checkbox_error = document.getElementById("checkbox_error");
+  let successMessage = document.getElementById("success_message");
+  let myForm = document.getElementById("myForm");
 
   function formValidation(event) {
 
     event.preventDefault();
+
+    let isValid = true;
     // First Name Validation
     if (fName.value.trim() === "") {
       firstName_error.innerHTML = "Please enter valid first name";
       firstName_error.style.color = "red";
       fName.style.border = "2px solid red";
+      isValid = false;
     } else {
       fName.style.border = "2px solid green";
     }
@@ -1678,6 +1683,7 @@ document.addEventListener("DOMContentLoaded", function () {
       lastName_error.innerHTML = "Please enter valid last name";
       lastName_error.style.color = "red";
       lName.style.border = "2px solid red";
+      isValid = false;
     } else {
       lName.style.border = "2px solid green";
     }
@@ -1687,6 +1693,7 @@ document.addEventListener("DOMContentLoaded", function () {
       email_error.innerHTML = "Please enter valid email";
       email_error.style.color = "red";
       email.style.border = "2px solid red";
+      isValid = false;
     } else {
       email.style.border = "2px solid green";
     }
@@ -1696,6 +1703,7 @@ document.addEventListener("DOMContentLoaded", function () {
       password_error.innerHTML = "Password must be at least 8 characters";
       password_error.style.color = "red";
       password.style.border = "2px solid red";
+      isValid = false;
     } else {
       password.style.border = "2px solid green";
     }
@@ -1705,6 +1713,7 @@ document.addEventListener("DOMContentLoaded", function () {
       confirm_error.innerHTML = "Passwords must match";
       confirmPassword.style.border = "2px solid red";
       confirm_error.style.color = "red";
+      isValid = false;
     } else {
       confirmPassword.style.border = "2px solid green";
     }
@@ -1714,6 +1723,7 @@ document.addEventListener("DOMContentLoaded", function () {
       message_error.innerHTML = "Please enter your message here";
       message_error.style.color = "red";
       textMessage.style.border = "2px solid red";
+      isValid = false;
     } else {
       textMessage.style.border = "2px solid green";
     }
@@ -1722,10 +1732,30 @@ document.addEventListener("DOMContentLoaded", function () {
     if (checkboxBtn.checked === false) {
       checkbox_error.innerHTML = "Please accept our terms and conditions";
       checkbox_error.style.color = "red";
+      isValid = false
     } else {
       checkbox_error.innerHTML = ""; // Clear error message when checked
+    }
+
+    if(isValid){
+     myForm.style.display ="none";
+     successMessage.style.display = "block";
     }
   }
   button.addEventListener("click", formValidation)
 });
 
+async function fetchDataFromApi(){
+  try{
+const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    if(!response.ok){
+       throw new error("Failed to fetch the data")
+    }
+    const data = await response.json();
+    console.log(data);
+  }
+  catch(error){
+     console.error("error",error);
+  }
+}
+fetchDataFromApi();
