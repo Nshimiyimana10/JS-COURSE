@@ -1745,6 +1745,8 @@ document.addEventListener("DOMContentLoaded", function () {
   button.addEventListener("click", formValidation)
 });
 
+//Fetching data from external API
+
 async function fetchDataFromApi(){
   try{
 const response = await fetch("https://jsonplaceholder.typicode.com/users");
