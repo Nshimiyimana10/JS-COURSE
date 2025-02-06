@@ -1756,10 +1756,36 @@ const response = await fetch("https://jsonplaceholder.typicode.com/users");
     const data = await response.json();
    // console.log(data);
     const userNames = data.map(user =>user.name +" " + "k.a" + " " + user.username);
-    console.log(userNames);
+          userNames.forEach(element =>{
+    const list = document.createElement("li");
+          list.innerHTML = element;
+    })
+   
+    const mainDiv = document.getElementById("main-container");
+    const listItems = document.getElementById("item-lists");
+          listItems.appendChild(list);
+          mainDiv.appendChild(listItems);
+    
+                                                               
   }
   catch(error){
      console.error("error",error);
   }
 }
 fetchDataFromApi();
+
+async function otherFetchData(){
+ try{
+  const response = await fetch("https://restcountries.com/v3.1/all");
+  if(!response.ok){
+    throw new Error("Failed to fetch data from an API")
+  }
+  const data = await response.json();
+  const countryNames = data.map((element) => element.altSpellings)
+  console.log(countryNames);
+ }
+ catch(error){
+  console.log("error", error)
+ }
+}
+otherFetchData();
