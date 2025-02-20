@@ -1747,32 +1747,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Fetching data from external API
 
-async function fetchDataFromApi(){
-  try{
-const response = await fetch("https://jsonplaceholder.typicode.com/users");
-    if(!response.ok){
-       throw new error("Failed to fetch the data")
-    }
-    const data = await response.json();
-   // console.log(data);
-    const userNames = data.map(user =>user.name +" " + "k.a" + " " + user.username);
-          userNames.forEach(element =>{
-    const list = document.createElement("li");
-          list.innerHTML = element;
-    })
+// async function fetchDataFromApi(){
+//   try{
+// const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//     if(!response.ok){
+//        throw new error("Failed to fetch the data")
+//     }
+//     const data = await response.json();
+//    // console.log(data);
+//     const userNames = data.map(user =>user.name +" " + "k.a" + " " + user.username);
+//           userNames.forEach(element =>{
+//     const list = document.createElement("li");
+//           list.innerHTML = element;
+//     })
    
-    const mainDiv = document.getElementById("main-container");
-    const listItems = document.getElementById("item-lists");
-          listItems.appendChild(list);
-          mainDiv.appendChild(listItems);
+//     const mainDiv = document.getElementById("main-container");
+//     const listItems = document.getElementById("item-lists");
+//           listItems.appendChild(list);
+//           mainDiv.appendChild(listItems);
     
                                                                
-  }
-  catch(error){
-     console.error("error",error);
-  }
-}
-fetchDataFromApi();
+//   }
+//   catch(error){
+//      console.error("error",error);
+//   }
+// }
+// fetchDataFromApi();
 
 async function otherFetchData(){
  try{
@@ -1790,3 +1790,46 @@ async function otherFetchData(){
 }
 otherFetchData();
 //
+
+//if...else statement
+
+function checkAge(age){
+  if(age >= 18){
+    console.log('Congratulations! You are allowed to take alcohol')
+    }
+    else{
+      console.log('sorry!You are not allowed to take alcohol')
+    }
+}
+checkAge(15);
+
+let school;
+console.log(school);
+
+console.log(5 == '5') // true => type coercion
+console.log(5 === '5') // false strict equality ==> type & value
+ let dev = '';
+ console.log(typeof dev);
+ 
+ let op1 = 'jonas';
+ let op2 = 5
+ let result = op1 * op2;
+ console.log(NaN === NaN);
+
+ let univ = 8;
+ function setCalculate(){
+  let a = 5
+  if(a){
+    let a = 4
+    console.log(a);
+  }
+  else{
+    console.log("Sorry")
+  }
+ }
+ setCalculate();
+ //global
+ //local
+ //block
+
+ 
