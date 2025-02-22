@@ -1832,4 +1832,29 @@ console.log(5 === '5') // false strict equality ==> type & value
  //local
  //block
 
- 
+ //This,call&apply
+ const infos ={
+  name: 'peter',
+  age: 28
+}
+ function sayMyName(){
+  console.log(`My name is ${this.name} and i'm ${this.age}`)
+  }
+sayMyName.call(infos);
+
+const hobbies = {
+  name: 'Charles',
+  state: 'Utah',
+  country : 'USA'
+}
+
+function tellLocation(hob){
+  console.log(`My name is ${this.name}.I live in ${this.state},${this.country}
+    but i like ${hob}`)
+}
+
+tellLocation.call(hobbies,'swimming');
+tellLocation.apply(hobbies,['swimming']);
+
+const tellMyHobbies = tellLocation.bind(hobbies);
+tellMyHobbies('swimming');
