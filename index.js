@@ -1858,3 +1858,48 @@ tellLocation.apply(hobbies,['swimming']);
 
 const tellMyHobbies = tellLocation.bind(hobbies);
 tellMyHobbies('swimming');
+
+function regularFunction(){
+  console.log(this)
+}
+regularFunction();
+
+//To reverse a number 
+
+function reverseNum(num){
+  let number = num.toString().split("").reverse().join("");
+  let newNum = Number(number)
+  return newNum;
+}
+console.log(reverseNum(1524));
+
+//Check palindrome
+
+function checkPal(string){
+   let newStr = string.split("").reverse().join("");
+   if(string === newStr){
+     console.log("string is palindrome")
+   }
+   else{
+    console.log("Not palindrome")
+   }
+}
+ checkPal("man");
+let str = "webinar kanuma quintus being"
+ //sort string alphabetically
+
+ function sortString(){
+  let str = "webinar kanuma quintus being"
+  let sortStr = str.split(" ").sort().join(" ")
+  return sortStr;
+ }
+ console.log(sortString())
+
+ function letterCap(string){
+  let newStr = string.split(" ");
+  let capWord = newStr.map((word) =>
+    word[0].toUpperCase() + word.slice(1)
+  ).join(" ");
+  return capWord;
+ }
+ console.log(letterCap("i have dream that we will live in harmony"));
