@@ -1903,3 +1903,12 @@ let str = "webinar kanuma quintus being"
   return capWord;
  }
  console.log(letterCap("i have dream that we will live in harmony"));
+
+ //Longest word
+
+ function longWord(string){
+  let newStr = string.split(" ").sort((a,b) =>b.length-a.length )[0];
+  return newStr;
+ }
+ console.log(longWord("Rwanda is beautiful country"));
+ 
