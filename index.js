@@ -1782,7 +1782,7 @@ async function otherFetchData(){
   }
   const data = await response.json();
   const countryNames = data.map((element) => element.altSpellings)
-  console.log(countryNames);
+  //console.log(countryNames);
  }
  catch(error){
   console.log("error", error)
@@ -1832,7 +1832,7 @@ console.log(5 === '5') // false strict equality ==> type & value
  //local
  //block
 
- //This,call&apply
+ //This,call&apply,bind
  const infos ={
   name: 'peter',
   age: 28
@@ -1856,8 +1856,8 @@ function tellLocation(hob){
 tellLocation.call(hobbies,'swimming');
 tellLocation.apply(hobbies,['swimming']);
 
-const tellMyHobbies = tellLocation.bind(hobbies);
-tellMyHobbies('swimming');
+const tellMyHobbies = tellLocation.bind(hobbies,'swimming');
+tellMyHobbies();
 
 function regularFunction(){
   console.log(this)
@@ -1911,4 +1911,47 @@ let str = "webinar kanuma quintus being"
   return newStr;
  }
  console.log(longWord("Rwanda is beautiful country"));
- 
+
+ function checkScope(){
+  
+  if(true){
+    let a = 5;
+    var b = 10;
+    const c = 4;
+
+    console.log(a)
+    console.log(b)
+    console.log(c)
+    
+  }
+  console.log(a)
+  console.log(b)
+  console.log(c)
+ }
+ checkScope();
+
+ function countVowels(str){
+   let vowels = str.match(/[iuoae]/ig);
+   return vowels.length;
+ }
+ console.log(countVowels("My name is John from canalbox."));
+
+ function findLowGreat(array){
+  let newArr = array.sort((a,b) => a-b);
+  let newPush = [];
+  let secondNum = newArr[1];
+  let lastNum = newArr[newArr.length-2];
+  newPush.push(secondNum);
+  newPush.push(lastNum);
+  return newPush;
+ }
+ console.log(findLowGreat([20,10,18,17,4]))
+
+ function unique(str){
+  const one = new Set(str);
+  const now = [...one].join("")
+  return now;
+ }
+ console.log(unique("thequickbrownfoxjumpsoverthelazydog"))
+
+ //end 
